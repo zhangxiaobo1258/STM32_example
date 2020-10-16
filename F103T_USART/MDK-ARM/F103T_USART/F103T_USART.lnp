@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"f103t_usart\startup_stm32f103xb.o"
+"f103t_usart\main.o"
+"f103t_usart\stm32f1xx_it.o"
+"f103t_usart\stm32f1xx_hal_msp.o"
+"f103t_usart\stm32f1xx_hal_gpio_ex.o"
+"f103t_usart\stm32f1xx_hal_tim.o"
+"f103t_usart\stm32f1xx_hal_tim_ex.o"
+"f103t_usart\stm32f1xx_hal_uart.o"
+"f103t_usart\stm32f1xx_hal.o"
+"f103t_usart\stm32f1xx_hal_rcc.o"
+"f103t_usart\stm32f1xx_hal_rcc_ex.o"
+"f103t_usart\stm32f1xx_hal_gpio.o"
+"f103t_usart\stm32f1xx_hal_dma.o"
+"f103t_usart\stm32f1xx_hal_cortex.o"
+"f103t_usart\stm32f1xx_hal_pwr.o"
+"f103t_usart\stm32f1xx_hal_flash.o"
+"f103t_usart\stm32f1xx_hal_flash_ex.o"
+"f103t_usart\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "F103T_USART\F103T_USART.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "F103T_USART.map" -o F103T_USART\F103T_USART.axf
