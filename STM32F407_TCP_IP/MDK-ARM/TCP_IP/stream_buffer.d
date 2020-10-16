@@ -1,0 +1,14 @@
+tcp_ip\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+tcp_ip\stream_buffer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+tcp_ip\stream_buffer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+tcp_ip\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+tcp_ip\stream_buffer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+tcp_ip\stream_buffer.o: ../Inc/FreeRTOSConfig.h
+tcp_ip\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+tcp_ip\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+tcp_ip\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+tcp_ip\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+tcp_ip\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+tcp_ip\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+tcp_ip\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+tcp_ip\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h

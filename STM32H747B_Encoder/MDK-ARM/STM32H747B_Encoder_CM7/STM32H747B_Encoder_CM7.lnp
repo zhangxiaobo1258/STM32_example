@@ -1,0 +1,28 @@
+--cpu Cortex-M7.fp.dp
+"stm32h747b_encoder_cm7\startup_stm32h747xx_cm7.o"
+"stm32h747b_encoder_cm7\main.o"
+"stm32h747b_encoder_cm7\stm32h7xx_it.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_msp.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_cortex.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_tim.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_tim_ex.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_rcc.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_rcc_ex.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_flash.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_flash_ex.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_gpio.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_hsem.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_dma.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_dma_ex.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_mdma.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_pwr.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_pwr_ex.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_i2c.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_i2c_ex.o"
+"stm32h747b_encoder_cm7\stm32h7xx_hal_exti.o"
+"stm32h747b_encoder_cm7\system_stm32h7xx_dualcore_boot_cm4_cm7.o"
+--library_type=microlib --strict --scatter "stm32h747xx_flash_CM7.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "STM32H747B_Encoder_CM7.map" -o STM32H747B_Encoder_CM7\STM32H747B_Encoder_CM7.axf

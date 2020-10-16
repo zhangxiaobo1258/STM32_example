@@ -1,0 +1,14 @@
+tcp_ip\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+tcp_ip\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+tcp_ip\croutine.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+tcp_ip\croutine.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+tcp_ip\croutine.o: ../Inc/FreeRTOSConfig.h
+tcp_ip\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+tcp_ip\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+tcp_ip\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+tcp_ip\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+tcp_ip\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+tcp_ip\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+tcp_ip\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+tcp_ip\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+tcp_ip\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

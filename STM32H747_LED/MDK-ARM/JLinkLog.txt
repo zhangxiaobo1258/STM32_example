@@ -1,0 +1,36 @@
+T2DCC 182:710 SEGGER J-Link V6.46 Log File (0001ms, 37250ms total)
+T2DCC 182:710 DLL Compiled: May 23 2019 17:49:56 (0001ms, 37250ms total)
+T2DCC 182:710 Logging started @ 2020-05-04 11:44 (0001ms, 37250ms total)
+T2DCC 182:711 JLINK_SetWarnOutHandler(...) (0000ms, 37250ms total)
+T2DCC 182:711 JLINK_OpenEx(...)
+Firmware: J-Link V9 compiled May 17 2019 09:50:41
+Hardware: V9.30
+S/N: 59308676
+Feature(s): RDI, GDB, FlashDL, FlashBP, JFlash
+TELNET listener socket opened on port 19021Device "CORTEX-M7" selected.WEBSRV 
+Starting webserver (0079ms, 37329ms total)
+T2DCC 182:711 WEBSRV Webserver running on local port 19080 (0079ms, 37329ms total)
+T2DCC 182:711   returns O.K. (0079ms, 37329ms total)
+T2DCC 182:790 JLINK_GetEmuCaps()  returns 0xB9FF7BBF (0000ms, 37329ms total)
+T2DCC 182:790 JLINK_TIF_GetAvailable(...) (0001ms, 37330ms total)
+T2DCC 182:792 JLINK_SetErrorOutHandler(...) (0000ms, 37330ms total)
+T2DCC 182:792 JLINK_ExecCommand("ProjectFile = "D:\Projects\STM32\STM32H747_LED\MDK-ARM\JLinkSettings.ini"", ...). Device "CORTEX-M7" selected.  returns 0x00 (0003ms, 37333ms total)
+T2DCC 182:795 JLINK_ExecCommand("Device = STM32H747XIHx:CM7", ...). Device "CORTEX-M7" selected.  returns 0x00 (0003ms, 37336ms total)
+T2DCC 182:798 JLINK_ExecCommand("DisableConnectionTimeout", ...).   returns 0x01 (0000ms, 37336ms total)
+T2DCC 182:798 JLINK_GetHardwareVersion()  returns 0x16B48 (0000ms, 37336ms total)
+T2DCC 182:798 JLINK_GetDLLVersion()  returns 64600 (0000ms, 37336ms total)
+T2DCC 182:798 JLINK_GetFirmwareString(...) (0000ms, 37336ms total)
+T2DCC 182:798 JLINK_GetDLLVersion()  returns 64600 (0000ms, 37336ms total)
+T2DCC 182:798 JLINK_GetCompileDateTime() (0000ms, 37336ms total)
+T2DCC 182:798 JLINK_GetFirmwareString(...) (0000ms, 37336ms total)
+T2DCC 182:798 JLINK_GetHardwareVersion()  returns 0x16B48 (0000ms, 37336ms total)
+T2DCC 182:798 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0001ms, 37337ms total)
+T2DCC 182:799 JLINK_SetSpeed(5000) (0000ms, 37337ms total)
+T2DCC 182:800 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)  returns JLINKARM_RESET_TYPE_NORMAL (0000ms, 37337ms total)
+T2DCC 182:800 JLINK_Reset() >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>JLINK_GetId() >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>  returns 0x00000000
+ (0286ms, 38434ms total)
+T2DCC 183:897 JLINK_GetId() >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>  returns 0x00000000 (0284ms, 38718ms total)
+T2DCC 184:193 JLINK_GetFirmwareString(...) (0000ms, 38718ms total)
+T2DCC 185:840 JLINK_Close() (0010ms, 38728ms total)
+T2DCC 185:840  (0010ms, 38728ms total)
+T2DCC 185:840 Closed (0010ms, 38728ms total)

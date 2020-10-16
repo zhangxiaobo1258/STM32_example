@@ -1,0 +1,498 @@
+---- Sequence Matches (80 in 16 files) ----
+core_armv8mml.h (Drivers\CMSIS\Include) line 2108 : 
+  \brief   Set Priority Grouping
+  \details Sets the priority grouping field using the required unlock sequence.
+           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+           Only values from 0..7 are used.
+           In case of a conflict between priority grouping and available
+core_armv8mml.h (Drivers\CMSIS\Include) line 2482 : 
+  \brief   Set Priority Grouping (non-secure)
+  \details Sets the non-secure priority grouping field when in secure state using the required unlock sequence.
+           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+           Only values from 0..7 are used.
+           In case of a conflict between priority grouping and available
+core_cm3.h (Drivers\CMSIS\Include) line 1472 : 
+  \brief   Set Priority Grouping
+  \details Sets the priority grouping field using the required unlock sequence.
+           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+           Only values from 0..7 are used.
+           In case of a conflict between priority grouping and available
+core_cm33.h (Drivers\CMSIS\Include) line 2183 : 
+  \brief   Set Priority Grouping
+  \details Sets the priority grouping field using the required unlock sequence.
+           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+           Only values from 0..7 are used.
+           In case of a conflict between priority grouping and available
+core_cm33.h (Drivers\CMSIS\Include) line 2557 : 
+  \brief   Set Priority Grouping (non-secure)
+  \details Sets the non-secure priority grouping field when in secure state using the required unlock sequence.
+           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+           Only values from 0..7 are used.
+           In case of a conflict between priority grouping and available
+core_cm4.h (Drivers\CMSIS\Include) line 1649 : 
+  \brief   Set Priority Grouping
+  \details Sets the priority grouping field using the required unlock sequence.
+           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+           Only values from 0..7 are used.
+           In case of a conflict between priority grouping and available
+core_cm7.h (Drivers\CMSIS\Include) line 1857 : 
+  \brief   Set Priority Grouping
+  \details Sets the priority grouping field using the required unlock sequence.
+           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+           Only values from 0..7 are used.
+           In case of a conflict between priority grouping and available
+core_sc300.h (Drivers\CMSIS\Include) line 1453 : 
+  \brief   Set Priority Grouping
+  \details Sets the priority grouping field using the required unlock sequence.
+           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+           Only values from 0..7 are used.
+           In case of a conflict between priority grouping and available
+main in main.c (CM4\Src) : 
+
+/* USER CODE BEGIN Boot_Mode_Sequence_1 */
+  /*HW semaphore Clock enable*/
+  __HAL_RCC_HSEM_CLK_ENABLE();
+  /* Activate HSEM notification for Cortex-M4*/
+main in main.c (CM4\Src) : 
+
+/* USER CODE END Boot_Mode_Sequence_1 */
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+main in main.c (CM7\Src) : 
+  /* USER CODE END 1 */
+  /* USER CODE BEGIN Boot_Mode_Sequence_0 */
+    int32_t timeout; 
+  /* USER CODE END Boot_Mode_Sequence_0 */
+
+/* USER CODE BEGIN Boot_Mode_Sequence_1 */
+  /* Wait until CPU2 boots and enters in stop mode or timeout*/
+  timeout = 0xFFFF;
+  while((__HAL_RCC_GET_FLAG(RCC_FLAG_D2CKRDY) != RESET) && (timeout-- > 0));
+main in main.c (CM7\Src) : 
+  }
+/* USER CODE END Boot_Mode_Sequence_1 */
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+main in main.c (CM7\Src) : 
+  SystemClock_Config();
+/* USER CODE BEGIN Boot_Mode_Sequence_2 */
+/* When system initialization is finished, Cortex-M7 will release Cortex-M4 by means of
+HSEM notification */
+/*HW semaphore Clock enable*/
+main in main.c (CM7\Src) : 
+}
+/* USER CODE END Boot_Mode_Sequence_2 */
+
+  /* USER CODE BEGIN SysInit */
+
+MX_FMC_Init in main.c (CM7\Src) : 
+
+    /** Perform the SDRAM1 memory initialization sequence
+    */
+    hsdram1.Instance = FMC_SDRAM_DEVICE;
+    /* hsdram1.Init */
+{anonADC_TypeDef} in stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) : 
+  uint32_t      RESERVED2;        /*!< Reserved, 0x02C                                                                  */
+  __IO uint32_t SQR1;             /*!< ADC regular sequence register 1,                            Address offset: 0x30 */
+  __IO uint32_t SQR2;             /*!< ADC regular sequence register 2,                            Address offset: 0x34 */
+  __IO uint32_t SQR3;             /*!< ADC regular sequence register 3,                            Address offset: 0x38 */
+  __IO uint32_t SQR4;             /*!< ADC regular sequence register 4,                            Address offset: 0x3C */
+  __IO uint32_t DR;               /*!< ADC regular data register,                                  Address offset: 0x40 */
+  uint32_t      RESERVED3;        /*!< Reserved, 0x044                                                                  */
+  uint32_t      RESERVED4;        /*!< Reserved, 0x048                                                                  */
+  __IO uint32_t JSQR;             /*!< ADC injected sequence register,                             Address offset: 0x4C */
+  uint32_t      RESERVED5[4];     /*!< Reserved, 0x050 - 0x05C                                                          */
+  __IO uint32_t OFR1;             /*!< ADC offset register 1,                                      Address offset: 0x60 */
+  __IO uint32_t OFR2;             /*!< ADC offset register 2,                                      Address offset: 0x64 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 2817 : 
+#define ADC_ISR_EOS_Msk                   (0x1UL << ADC_ISR_EOS_Pos)           /*!< 0x00000008 */
+#define ADC_ISR_EOS                       ADC_ISR_EOS_Msk                      /*!< ADC End of Regular sequence of Conversions flag */
+#define ADC_ISR_OVR_Pos                   (4U)
+#define ADC_ISR_OVR_Msk                   (0x1UL << ADC_ISR_OVR_Pos)           /*!< 0x00000010 */
+#define ADC_ISR_OVR                       ADC_ISR_OVR_Msk                      /*!< ADC overrun flag */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 2826 : 
+#define ADC_ISR_JEOS_Msk                  (0x1UL << ADC_ISR_JEOS_Pos)          /*!< 0x00000040 */
+#define ADC_ISR_JEOS                      ADC_ISR_JEOS_Msk                     /*!< ADC End of Injected sequence of Conversions flag */
+#define ADC_ISR_AWD1_Pos                  (7U)
+#define ADC_ISR_AWD1_Msk                  (0x1UL << ADC_ISR_AWD1_Pos)          /*!< 0x00000080 */
+#define ADC_ISR_AWD1                      ADC_ISR_AWD1_Msk                     /*!< ADC Analog watchdog 1 flag */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 2852 : 
+#define ADC_IER_EOSIE_Msk                 (0x1UL << ADC_IER_EOSIE_Pos)         /*!< 0x00000008 */
+#define ADC_IER_EOSIE                     ADC_IER_EOSIE_Msk                    /*!< ADC End of Regular sequence of Conversions interrupt source */
+#define ADC_IER_OVRIE_Pos                 (4U)
+#define ADC_IER_OVRIE_Msk                 (0x1UL << ADC_IER_OVRIE_Pos)         /*!< 0x00000010 */
+#define ADC_IER_OVRIE                     ADC_IER_OVRIE_Msk                    /*!< ADC overrun interrupt source */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 2861 : 
+#define ADC_IER_JEOSIE_Msk                (0x1UL << ADC_IER_JEOSIE_Pos)        /*!< 0x00000040 */
+#define ADC_IER_JEOSIE                    ADC_IER_JEOSIE_Msk                   /*!< ADC End of Injected sequence of Conversions interrupt source */
+#define ADC_IER_AWD1IE_Pos                (7U)
+#define ADC_IER_AWD1IE_Msk                (0x1UL << ADC_IER_AWD1IE_Pos)        /*!< 0x00000080 */
+#define ADC_IER_AWD1IE                    ADC_IER_AWD1IE_Msk                   /*!< ADC Analog watchdog 1 interrupt source */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3254 : 
+#define ADC_SQR1_L_Msk                    (0xFUL << ADC_SQR1_L_Pos)            /*!< 0x0000000F */
+#define ADC_SQR1_L                        ADC_SQR1_L_Msk                       /*!< ADC regular channel sequence lenght */
+#define ADC_SQR1_L_0                      (0x1UL << ADC_SQR1_L_Pos)             /*!< 0x00000001 */
+#define ADC_SQR1_L_1                      (0x2UL << ADC_SQR1_L_Pos)             /*!< 0x00000002 */
+#define ADC_SQR1_L_2                      (0x4UL << ADC_SQR1_L_Pos)             /*!< 0x00000004 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3262 : 
+#define ADC_SQR1_SQ1_Msk                  (0x1FUL << ADC_SQR1_SQ1_Pos)         /*!< 0x000007C0 */
+#define ADC_SQR1_SQ1                      ADC_SQR1_SQ1_Msk                     /*!< ADC 1st conversion in regular sequence */
+#define ADC_SQR1_SQ1_0                    (0x01UL << ADC_SQR1_SQ1_Pos)          /*!< 0x00000040 */
+#define ADC_SQR1_SQ1_1                    (0x02UL << ADC_SQR1_SQ1_Pos)          /*!< 0x00000080 */
+#define ADC_SQR1_SQ1_2                    (0x04UL << ADC_SQR1_SQ1_Pos)          /*!< 0x00000100 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3271 : 
+#define ADC_SQR1_SQ2_Msk                  (0x1FUL << ADC_SQR1_SQ2_Pos)         /*!< 0x0001F000 */
+#define ADC_SQR1_SQ2                      ADC_SQR1_SQ2_Msk                     /*!< ADC 2nd conversion in regular sequence */
+#define ADC_SQR1_SQ2_0                    (0x01UL << ADC_SQR1_SQ2_Pos)          /*!< 0x00001000 */
+#define ADC_SQR1_SQ2_1                    (0x02UL << ADC_SQR1_SQ2_Pos)          /*!< 0x00002000 */
+#define ADC_SQR1_SQ2_2                    (0x04UL << ADC_SQR1_SQ2_Pos)          /*!< 0x00004000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3280 : 
+#define ADC_SQR1_SQ3_Msk                  (0x1FUL << ADC_SQR1_SQ3_Pos)         /*!< 0x007C0000 */
+#define ADC_SQR1_SQ3                      ADC_SQR1_SQ3_Msk                     /*!< ADC 3rd conversion in regular sequence */
+#define ADC_SQR1_SQ3_0                    (0x01UL << ADC_SQR1_SQ3_Pos)          /*!< 0x00040000 */
+#define ADC_SQR1_SQ3_1                    (0x02UL << ADC_SQR1_SQ3_Pos)          /*!< 0x00080000 */
+#define ADC_SQR1_SQ3_2                    (0x04UL << ADC_SQR1_SQ3_Pos)          /*!< 0x00100000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3289 : 
+#define ADC_SQR1_SQ4_Msk                  (0x1FUL << ADC_SQR1_SQ4_Pos)         /*!< 0x1F000000 */
+#define ADC_SQR1_SQ4                      ADC_SQR1_SQ4_Msk                     /*!< ADC 4th conversion in regular sequence */
+#define ADC_SQR1_SQ4_0                    (0x01UL << ADC_SQR1_SQ4_Pos)          /*!< 0x01000000 */
+#define ADC_SQR1_SQ4_1                    (0x02UL << ADC_SQR1_SQ4_Pos)          /*!< 0x02000000 */
+#define ADC_SQR1_SQ4_2                    (0x04UL << ADC_SQR1_SQ4_Pos)          /*!< 0x04000000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3299 : 
+#define ADC_SQR2_SQ5_Msk                  (0x1FUL << ADC_SQR2_SQ5_Pos)         /*!< 0x0000001F */
+#define ADC_SQR2_SQ5                      ADC_SQR2_SQ5_Msk                     /*!< ADC 5th conversion in regular sequence */
+#define ADC_SQR2_SQ5_0                    (0x01UL << ADC_SQR2_SQ5_Pos)          /*!< 0x00000001 */
+#define ADC_SQR2_SQ5_1                    (0x02UL << ADC_SQR2_SQ5_Pos)          /*!< 0x00000002 */
+#define ADC_SQR2_SQ5_2                    (0x04UL << ADC_SQR2_SQ5_Pos)          /*!< 0x00000004 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3308 : 
+#define ADC_SQR2_SQ6_Msk                  (0x1FUL << ADC_SQR2_SQ6_Pos)         /*!< 0x000007C0 */
+#define ADC_SQR2_SQ6                      ADC_SQR2_SQ6_Msk                     /*!< ADC 6th conversion in regular sequence */
+#define ADC_SQR2_SQ6_0                    (0x01UL << ADC_SQR2_SQ6_Pos)          /*!< 0x00000040 */
+#define ADC_SQR2_SQ6_1                    (0x02UL << ADC_SQR2_SQ6_Pos)          /*!< 0x00000080 */
+#define ADC_SQR2_SQ6_2                    (0x04UL << ADC_SQR2_SQ6_Pos)          /*!< 0x00000100 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3317 : 
+#define ADC_SQR2_SQ7_Msk                  (0x1FUL << ADC_SQR2_SQ7_Pos)         /*!< 0x0001F000 */
+#define ADC_SQR2_SQ7                      ADC_SQR2_SQ7_Msk                     /*!< ADC 7th conversion in regular sequence */
+#define ADC_SQR2_SQ7_0                    (0x01UL << ADC_SQR2_SQ7_Pos)          /*!< 0x00001000 */
+#define ADC_SQR2_SQ7_1                    (0x02UL << ADC_SQR2_SQ7_Pos)          /*!< 0x00002000 */
+#define ADC_SQR2_SQ7_2                    (0x04UL << ADC_SQR2_SQ7_Pos)          /*!< 0x00004000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3326 : 
+#define ADC_SQR2_SQ8_Msk                  (0x1FUL << ADC_SQR2_SQ8_Pos)         /*!< 0x007C0000 */
+#define ADC_SQR2_SQ8                      ADC_SQR2_SQ8_Msk                     /*!< ADC 8th conversion in regular sequence */
+#define ADC_SQR2_SQ8_0                    (0x01UL << ADC_SQR2_SQ8_Pos)          /*!< 0x00040000 */
+#define ADC_SQR2_SQ8_1                    (0x02UL << ADC_SQR2_SQ8_Pos)          /*!< 0x00080000 */
+#define ADC_SQR2_SQ8_2                    (0x04UL << ADC_SQR2_SQ8_Pos)          /*!< 0x00100000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3335 : 
+#define ADC_SQR2_SQ9_Msk                  (0x1FUL << ADC_SQR2_SQ9_Pos)         /*!< 0x1F000000 */
+#define ADC_SQR2_SQ9                      ADC_SQR2_SQ9_Msk                     /*!< ADC 9th conversion in regular sequence */
+#define ADC_SQR2_SQ9_0                    (0x01UL << ADC_SQR2_SQ9_Pos)          /*!< 0x01000000 */
+#define ADC_SQR2_SQ9_1                    (0x02UL << ADC_SQR2_SQ9_Pos)          /*!< 0x02000000 */
+#define ADC_SQR2_SQ9_2                    (0x04UL << ADC_SQR2_SQ9_Pos)          /*!< 0x04000000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3345 : 
+#define ADC_SQR3_SQ10_Msk                 (0x1FUL << ADC_SQR3_SQ10_Pos)        /*!< 0x0000001F */
+#define ADC_SQR3_SQ10                     ADC_SQR3_SQ10_Msk                    /*!< ADC 10th conversion in regular sequence */
+#define ADC_SQR3_SQ10_0                   (0x01UL << ADC_SQR3_SQ10_Pos)         /*!< 0x00000001 */
+#define ADC_SQR3_SQ10_1                   (0x02UL << ADC_SQR3_SQ10_Pos)         /*!< 0x00000002 */
+#define ADC_SQR3_SQ10_2                   (0x04UL << ADC_SQR3_SQ10_Pos)         /*!< 0x00000004 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3354 : 
+#define ADC_SQR3_SQ11_Msk                 (0x1FUL << ADC_SQR3_SQ11_Pos)        /*!< 0x000007C0 */
+#define ADC_SQR3_SQ11                     ADC_SQR3_SQ11_Msk                    /*!< ADC 11th conversion in regular sequence */
+#define ADC_SQR3_SQ11_0                   (0x01UL << ADC_SQR3_SQ11_Pos)         /*!< 0x00000040 */
+#define ADC_SQR3_SQ11_1                   (0x02UL << ADC_SQR3_SQ11_Pos)         /*!< 0x00000080 */
+#define ADC_SQR3_SQ11_2                   (0x04UL << ADC_SQR3_SQ11_Pos)         /*!< 0x00000100 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3363 : 
+#define ADC_SQR3_SQ12_Msk                 (0x1FUL << ADC_SQR3_SQ12_Pos)        /*!< 0x0001F000 */
+#define ADC_SQR3_SQ12                     ADC_SQR3_SQ12_Msk                    /*!< ADC 12th conversion in regular sequence */
+#define ADC_SQR3_SQ12_0                   (0x01UL << ADC_SQR3_SQ12_Pos)         /*!< 0x00001000 */
+#define ADC_SQR3_SQ12_1                   (0x02UL << ADC_SQR3_SQ12_Pos)         /*!< 0x00002000 */
+#define ADC_SQR3_SQ12_2                   (0x04UL << ADC_SQR3_SQ12_Pos)         /*!< 0x00004000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3372 : 
+#define ADC_SQR3_SQ13_Msk                 (0x1FUL << ADC_SQR3_SQ13_Pos)        /*!< 0x007C0000 */
+#define ADC_SQR3_SQ13                     ADC_SQR3_SQ13_Msk                    /*!< ADC 13th conversion in regular sequence */
+#define ADC_SQR3_SQ13_0                   (0x01UL << ADC_SQR3_SQ13_Pos)         /*!< 0x00040000 */
+#define ADC_SQR3_SQ13_1                   (0x02UL << ADC_SQR3_SQ13_Pos)         /*!< 0x00080000 */
+#define ADC_SQR3_SQ13_2                   (0x04UL << ADC_SQR3_SQ13_Pos)         /*!< 0x00100000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3381 : 
+#define ADC_SQR3_SQ14_Msk                 (0x1FUL << ADC_SQR3_SQ14_Pos)        /*!< 0x1F000000 */
+#define ADC_SQR3_SQ14                     ADC_SQR3_SQ14_Msk                    /*!< ADC 14th conversion in regular sequence */
+#define ADC_SQR3_SQ14_0                   (0x01UL << ADC_SQR3_SQ14_Pos)         /*!< 0x01000000 */
+#define ADC_SQR3_SQ14_1                   (0x02UL << ADC_SQR3_SQ14_Pos)         /*!< 0x02000000 */
+#define ADC_SQR3_SQ14_2                   (0x04UL << ADC_SQR3_SQ14_Pos)         /*!< 0x04000000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3391 : 
+#define ADC_SQR4_SQ15_Msk                 (0x1FUL << ADC_SQR4_SQ15_Pos)        /*!< 0x0000001F */
+#define ADC_SQR4_SQ15                     ADC_SQR4_SQ15_Msk                    /*!< ADC 15th conversion in regular sequence */
+#define ADC_SQR4_SQ15_0                   (0x01UL << ADC_SQR4_SQ15_Pos)         /*!< 0x00000001 */
+#define ADC_SQR4_SQ15_1                   (0x02UL << ADC_SQR4_SQ15_Pos)         /*!< 0x00000002 */
+#define ADC_SQR4_SQ15_2                   (0x04UL << ADC_SQR4_SQ15_Pos)         /*!< 0x00000004 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3400 : 
+#define ADC_SQR4_SQ16_Msk                 (0x1FUL << ADC_SQR4_SQ16_Pos)        /*!< 0x000007C0 */
+#define ADC_SQR4_SQ16                     ADC_SQR4_SQ16_Msk                    /*!< ADC 16th conversion in regular sequence */
+#define ADC_SQR4_SQ16_0                   (0x01UL << ADC_SQR4_SQ16_Pos)         /*!< 0x00000040 */
+#define ADC_SQR4_SQ16_1                   (0x02UL << ADC_SQR4_SQ16_Pos)         /*!< 0x00000080 */
+#define ADC_SQR4_SQ16_2                   (0x04UL << ADC_SQR4_SQ16_Pos)         /*!< 0x00000100 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3414 : 
+#define ADC_JSQR_JL_Msk                   (0x3UL << ADC_JSQR_JL_Pos)           /*!< 0x00000003 */
+#define ADC_JSQR_JL                       ADC_JSQR_JL_Msk                      /*!< ADC injected channel sequence length */
+#define ADC_JSQR_JL_0                     (0x1UL << ADC_JSQR_JL_Pos)           /*!< 0x00000001 */
+#define ADC_JSQR_JL_1                     (0x2UL << ADC_JSQR_JL_Pos)           /*!< 0x00000002 */
+
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3435 : 
+#define ADC_JSQR_JSQ1_Msk                 (0x1FUL << ADC_JSQR_JSQ1_Pos)        /*!< 0x00003E00 */
+#define ADC_JSQR_JSQ1                     ADC_JSQR_JSQ1_Msk                    /*!< ADC 1st conversion in injected sequence */
+#define ADC_JSQR_JSQ1_0                   (0x01UL << ADC_JSQR_JSQ1_Pos)        /*!< 0x00000200 */
+#define ADC_JSQR_JSQ1_1                   (0x02UL << ADC_JSQR_JSQ1_Pos)        /*!< 0x00000400 */
+#define ADC_JSQR_JSQ1_2                   (0x04UL << ADC_JSQR_JSQ1_Pos)        /*!< 0x00000800 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3444 : 
+#define ADC_JSQR_JSQ2_Msk                 (0x1FUL << ADC_JSQR_JSQ2_Pos)        /*!< 0x000F8000 */
+#define ADC_JSQR_JSQ2                     ADC_JSQR_JSQ2_Msk                    /*!< ADC 2nd conversion in injected sequence */
+#define ADC_JSQR_JSQ2_0                   (0x01UL << ADC_JSQR_JSQ2_Pos)        /*!< 0x00008000 */
+#define ADC_JSQR_JSQ2_1                   (0x02UL << ADC_JSQR_JSQ2_Pos)        /*!< 0x00010000 */
+#define ADC_JSQR_JSQ2_2                   (0x04UL << ADC_JSQR_JSQ2_Pos)        /*!< 0x00020000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3453 : 
+#define ADC_JSQR_JSQ3_Msk                 (0x1FUL << ADC_JSQR_JSQ3_Pos)        /*!< 0x03E00000 */
+#define ADC_JSQR_JSQ3                     ADC_JSQR_JSQ3_Msk                    /*!< ADC 3rd conversion in injected sequence */
+#define ADC_JSQR_JSQ3_0                   (0x01UL << ADC_JSQR_JSQ3_Pos)        /*!< 0x00200000 */
+#define ADC_JSQR_JSQ3_1                   (0x02UL << ADC_JSQR_JSQ3_Pos)        /*!< 0x00400000 */
+#define ADC_JSQR_JSQ3_2                   (0x04UL << ADC_JSQR_JSQ3_Pos)        /*!< 0x00800000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3462 : 
+#define ADC_JSQR_JSQ4_Msk                 (0x1FUL << ADC_JSQR_JSQ4_Pos)        /*!< 0xF8000000 */
+#define ADC_JSQR_JSQ4                     ADC_JSQR_JSQ4_Msk                    /*!< ADC 4th conversion in injected sequence */
+#define ADC_JSQR_JSQ4_0                   (0x01UL << ADC_JSQR_JSQ4_Pos)        /*!< 0x08000000 */
+#define ADC_JSQR_JSQ4_1                   (0x02UL << ADC_JSQR_JSQ4_Pos)        /*!< 0x10000000 */
+#define ADC_JSQR_JSQ4_2                   (0x04UL << ADC_JSQR_JSQ4_Pos)        /*!< 0x20000000 */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3950 : 
+#define ADC_CSR_EOS_MST_Msk               (0x1UL << ADC_CSR_EOS_MST_Pos)       /*!< 0x00000008 */
+#define ADC_CSR_EOS_MST                   ADC_CSR_EOS_MST_Msk                  /*!< End of regular sequence flag of the master ADC */
+#define ADC_CSR_OVR_MST_Pos               (4U)
+#define ADC_CSR_OVR_MST_Msk               (0x1UL << ADC_CSR_OVR_MST_Pos)       /*!< 0x00000010 */
+#define ADC_CSR_OVR_MST                   ADC_CSR_OVR_MST_Msk                  /*!< Overrun flag of the master ADC */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3959 : 
+#define ADC_CSR_JEOS_MST_Msk              (0x1UL << ADC_CSR_JEOS_MST_Pos)      /*!< 0x00000040 */
+#define ADC_CSR_JEOS_MST                  ADC_CSR_JEOS_MST_Msk                 /*!< End of injected sequence flag of the master ADC */
+#define ADC_CSR_AWD1_MST_Pos              (7U)
+#define ADC_CSR_AWD1_MST_Msk              (0x1UL << ADC_CSR_AWD1_MST_Pos)      /*!< 0x00000080 */
+#define ADC_CSR_AWD1_MST                  ADC_CSR_AWD1_MST_Msk                 /*!< Analog watchdog 1 flag of the master ADC */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3983 : 
+#define ADC_CSR_EOS_SLV_Msk               (0x1UL << ADC_CSR_EOS_SLV_Pos)       /*!< 0x00080000 */
+#define ADC_CSR_EOS_SLV                   ADC_CSR_EOS_SLV_Msk                  /*!< End of regular sequence flag of the slave ADC */
+#define ADC_CSR_OVR_SLV_Pos               (20U)
+#define ADC_CSR_OVR_SLV_Msk               (0x1UL << ADC_CSR_OVR_SLV_Pos)       /*!< 0x00100000 */
+#define ADC_CSR_OVR_SLV                   ADC_CSR_OVR_SLV_Msk                  /*!< Overrun flag of the slave ADC */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 3992 : 
+#define ADC_CSR_JEOS_SLV_Msk              (0x1UL << ADC_CSR_JEOS_SLV_Pos)      /*!< 0x00400000 */
+#define ADC_CSR_JEOS_SLV                  ADC_CSR_JEOS_SLV_Msk                 /*!< End of injected sequence flag of the slave ADC */
+#define ADC_CSR_AWD1_SLV_Pos              (23U)
+#define ADC_CSR_AWD1_SLV_Msk              (0x1UL << ADC_CSR_AWD1_SLV_Pos)      /*!< 0x00800000 */
+#define ADC_CSR_AWD1_SLV                  ADC_CSR_AWD1_SLV_Msk                 /*!< Analog watchdog 1 flag of the slave ADC */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 13889 : 
+#define FLASH_CR_PGSERRIE_Msk                (0x1UL << FLASH_CR_PGSERRIE_Pos)  /*!< 0x00040000 */
+#define FLASH_CR_PGSERRIE                    FLASH_CR_PGSERRIE_Msk             /*!< Programming sequence error interrupt enable bit */
+#define FLASH_CR_STRBERRIE_Pos               (19U)
+#define FLASH_CR_STRBERRIE_Msk               (0x1UL << FLASH_CR_STRBERRIE_Pos) /*!< 0x00080000 */
+#define FLASH_CR_STRBERRIE                   FLASH_CR_STRBERRIE_Msk            /*!< Strobe error interrupt enable bit */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 13939 : 
+#define FLASH_SR_PGSERR_Msk                  (0x1UL << FLASH_SR_PGSERR_Pos)    /*!< 0x00040000 */
+#define FLASH_SR_PGSERR                      FLASH_SR_PGSERR_Msk               /*!< Programming sequence error flag */
+#define FLASH_SR_STRBERR_Pos                 (19U)
+#define FLASH_SR_STRBERR_Msk                 (0x1UL << FLASH_SR_STRBERR_Pos)   /*!< 0x00080000 */
+#define FLASH_SR_STRBERR                     FLASH_SR_STRBERR_Msk              /*!< Strobe error flag */
+stm32h747xx.h (Drivers\CMSIS\Device\ST\STM32H7xx\Include) line 21341 : 
+#define SDMMC_POWER_VSWITCH_Msk          (0x1UL << SDMMC_POWER_VSWITCH_Pos)    /*!< 0x00000004 */
+#define SDMMC_POWER_VSWITCH              SDMMC_POWER_VSWITCH_Msk               /*!<Voltage switch sequence start */
+#define SDMMC_POWER_VSWITCHEN_Pos        (3U)
+#define SDMMC_POWER_VSWITCHEN_Msk        (0x1UL << SDMMC_POWER_VSWITCHEN_Pos)  /*!< 0x00000008 */
+#define SDMMC_POWER_VSWITCHEN            SDMMC_POWER_VSWITCHEN_Msk             /*!<Voltage switch procedure enable */
+stm32h7xx_hal_cortex.c (Drivers\STM32H7xx_HAL_Driver\Src) line 125 : 
+  * @brief  Sets the priority grouping field (preemption priority and subpriority)
+  *         using the required unlock sequence.
+  * @param  PriorityGroup The priority grouping bits length.
+  *         This parameter can be one of the following values:
+  *         @arg NVIC_PRIORITYGROUP_0: 0 bits for preemption priority
+stm32h7xx_hal_flash.c (Drivers\STM32H7xx_HAL_Driver\Src) line 857 : 
+  *            @arg HAL_FLASH_ERROR_WRP_BANK1  : Write Protection Error on Bank 1
+  *            @arg HAL_FLASH_ERROR_PGS_BANK1  : Program Sequence Error on Bank 1
+  *            @arg HAL_FLASH_ERROR_STRB_BANK1 : Strobe Error on Bank 1
+  *            @arg HAL_FLASH_ERROR_INC_BANK1  : Inconsistency Error on Bank 1
+  *            @arg HAL_FLASH_ERROR_OPE_BANK1  : Operation Error on Bank 1
+stm32h7xx_hal_flash.c (Drivers\STM32H7xx_HAL_Driver\Src) line 868 : 
+  *            @arg HAL_FLASH_ERROR_WRP_BANK2  : Write Protection Error on Bank 2
+  *            @arg HAL_FLASH_ERROR_PGS_BANK2  : Program Sequence Error on Bank 2
+  *            @arg HAL_FLASH_ERROR_STRB_BANK2 : Strobe Error on Bank 2
+  *            @arg HAL_FLASH_ERROR_INC_BANK2  : Inconsistency Error on Bank 2
+  *            @arg HAL_FLASH_ERROR_OPE_BANK2  : Operation Error on Bank 2
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 96 : 
+#define HAL_FLASH_ERROR_WRP          FLASH_FLAG_WRPERR         /*!< Write Protection Error                */
+#define HAL_FLASH_ERROR_PGS          FLASH_FLAG_PGSERR         /*!< Program Sequence Error                */
+#define HAL_FLASH_ERROR_STRB         FLASH_FLAG_STRBERR        /*!< Strobe Error                          */
+#define HAL_FLASH_ERROR_INC          FLASH_FLAG_INCERR         /*!< Inconsistency Error                   */
+#if defined (FLASH_SR_OPERR)
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 109 : 
+#define HAL_FLASH_ERROR_WRP_BANK1    FLASH_FLAG_WRPERR_BANK1   /*!< Write Protection Error on Bank 1      */
+#define HAL_FLASH_ERROR_PGS_BANK1    FLASH_FLAG_PGSERR_BANK1   /*!< Program Sequence Error on Bank 1      */
+#define HAL_FLASH_ERROR_STRB_BANK1   FLASH_FLAG_STRBERR_BANK1  /*!< Strobe Error on Bank 1                */
+#define HAL_FLASH_ERROR_INC_BANK1    FLASH_FLAG_INCERR_BANK1   /*!< Inconsistency Error on Bank 1         */
+#if defined (FLASH_SR_OPERR)
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 122 : 
+#define HAL_FLASH_ERROR_WRP_BANK2    FLASH_FLAG_WRPERR_BANK2    /*!< Write Protection Error on Bank 2      */
+#define HAL_FLASH_ERROR_PGS_BANK2    FLASH_FLAG_PGSERR_BANK2    /*!< Program Sequence Error on Bank 2      */
+#define HAL_FLASH_ERROR_STRB_BANK2   FLASH_FLAG_STRBERR_BANK2   /*!< Strobe Error on Bank 2                */
+#define HAL_FLASH_ERROR_INC_BANK2    FLASH_FLAG_INCERR_BANK2    /*!< Inconsistency Error on Bank 2         */
+#if defined (FLASH_SR_OPERR)
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 160 : 
+#define FLASH_FLAG_WRPERR                  FLASH_SR_WRPERR          /*!< Write Protection Error on flag */
+#define FLASH_FLAG_PGSERR                  FLASH_SR_PGSERR          /*!< Program Sequence Error on flag */
+#define FLASH_FLAG_STRBERR                 FLASH_SR_STRBERR         /*!< Strobe Error flag */
+#define FLASH_FLAG_INCERR                  FLASH_SR_INCERR          /*!< Inconsistency Error on flag */
+#if defined (FLASH_SR_OPERR)
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 179 : 
+#define FLASH_FLAG_WRPERR_BANK1            FLASH_SR_WRPERR          /*!< Write Protection Error on Bank 1 flag */
+#define FLASH_FLAG_PGSERR_BANK1            FLASH_SR_PGSERR          /*!< Program Sequence Error on Bank 1 flag */
+#define FLASH_FLAG_STRBERR_BANK1           FLASH_SR_STRBERR         /*!< Strobe Error on Bank 1 flag */
+#define FLASH_FLAG_INCERR_BANK1            FLASH_SR_INCERR          /*!< Inconsistency Error on Bank 1 flag */
+#if defined (FLASH_SR_OPERR)
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 217 : 
+#define FLASH_FLAG_WRPERR_BANK2            (FLASH_SR_WRPERR   | 0x80000000U)        /*!< Write Protection Error on Bank 2 flag */
+#define FLASH_FLAG_PGSERR_BANK2            (FLASH_SR_PGSERR   | 0x80000000U)        /*!< Program Sequence Error on Bank 2 flag */
+#define FLASH_FLAG_STRBERR_BANK2           (FLASH_SR_STRBERR  | 0x80000000U)        /*!< Strobe Error on Bank 2 flag */
+#define FLASH_FLAG_INCERR_BANK2            (FLASH_SR_INCERR   | 0x80000000U)        /*!< Inconsistency Error on Bank 2 flag */
+#if defined (FLASH_SR_OPERR)
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 258 : 
+#define FLASH_IT_WRPERR_BANK1               FLASH_CR_WRPERRIE    /*!< Write Protection Error on Bank 1 Interrupt source */
+#define FLASH_IT_PGSERR_BANK1               FLASH_CR_PGSERRIE    /*!< Program Sequence Error on Bank 1 Interrupt source */
+#define FLASH_IT_STRBERR_BANK1              FLASH_CR_STRBERRIE   /*!< Strobe Error on Bank 1 Interrupt source */
+#define FLASH_IT_INCERR_BANK1               FLASH_CR_INCERRIE    /*!< Inconsistency Error on Bank 1 Interrupt source */
+#if defined (FLASH_CR_OPERRIE)
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 289 : 
+#define FLASH_IT_WRPERR_BANK2              (FLASH_CR_WRPERRIE   | 0x80000000U)  /*!< Write Protection Error on Bank 2 Interrupt source */
+#define FLASH_IT_PGSERR_BANK2              (FLASH_CR_PGSERRIE   | 0x80000000U)  /*!< Program Sequence Error on Bank 2 Interrupt source */
+#define FLASH_IT_STRBERR_BANK2             (FLASH_CR_STRBERRIE  | 0x80000000U)  /*!< Strobe Error on Bank 2 Interrupt source */
+#define FLASH_IT_INCERR_BANK2              (FLASH_CR_INCERRIE   | 0x80000000U)  /*!< Inconsistency Error on Bank 2 Interrupt source */
+#if defined (FLASH_CR_OPERRIE)
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 513 : 
+  *     @arg FLASH_IT_WRPERR_BANK1    : Write Protection Error on Bank 1 Interrupt source
+  *     @arg FLASH_IT_PGSERR_BANK1    : Program Sequence Error on Bank 1 Interrupt source
+  *     @arg FLASH_IT_STRBERR_BANK1   : Strobe Error on Bank 1 Interrupt source
+  *     @arg FLASH_IT_INCERR_BANK1    : Inconsistency Error on Bank 1 Interrupt source
+  *     @arg FLASH_IT_OPERR_BANK1     : Operation Error on Bank 1 Interrupt source
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 528 : 
+  *     @arg FLASH_IT_WRPERR_BANK2    : Write Protection Error on Bank 2 Interrupt source
+  *     @arg FLASH_IT_PGSERR_BANK2    : Program Sequence Error on Bank 2 Interrupt source
+  *     @arg FLASH_IT_STRBERR_BANK2   : Strobe Error on Bank 2 Interrupt source
+  *     @arg FLASH_IT_INCERR_BANK2    : Inconsistency Error on Bank 2 Interrupt source
+  *     @arg FLASH_IT_OPERR_BANK2     : Operation Error on Bank 2 Interrupt source
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 557 : 
+  *     @arg FLASH_IT_WRPERR_BANK1    : Write Protection Error on Bank 1 Interrupt source
+  *     @arg FLASH_IT_PGSERR_BANK1    : Program Sequence Error on Bank 1 Interrupt source
+  *     @arg FLASH_IT_STRBERR_BANK1   : Strobe Error on Bank 1 Interrupt source
+  *     @arg FLASH_IT_INCERR_BANK1    : Inconsistency Error on Bank 1 Interrupt source
+  *     @arg FLASH_IT_OPERR_BANK1     : Operation Error on Bank 1 Interrupt source
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 572 : 
+  *     @arg FLASH_IT_WRPERR_BANK2    : Write Protection Error on Bank 2 Interrupt source
+  *     @arg FLASH_IT_PGSERR_BANK2    : Program Sequence Error on Bank 2 Interrupt source
+  *     @arg FLASH_IT_STRBERR_BANK2   : Strobe Error on Bank 2 Interrupt source
+  *     @arg FLASH_IT_INCERR_BANK2    : Inconsistency Error on Bank 2 Interrupt source
+  *     @arg FLASH_IT_OPERR_BANK2     : Operation Error on Bank 2 Interrupt source
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 605 : 
+  *     @arg FLASH_FLAG_WRPERR_BANK1   : Write Protection Error on Bank 1 flag
+  *     @arg FLASH_FLAG_PGSERR_BANK1   : Program Sequence Error on Bank 1 flag
+  *     @arg FLASH_FLAG_STRBER_BANK1   : Program Alignment Error on Bank 1 flag
+  *     @arg FLASH_FLAG_INCERR_BANK1   : Inconsistency Error on Bank 1 flag
+  *     @arg FLASH_FLAG_OPERR_BANK1    : Operation Error on Bank 1 flag
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 623 : 
+  *     @arg FLASH_FLAG_WRPERR_BANK2   : Write Protection Error on Bank 2 flag
+  *     @arg FLASH_FLAG_PGSERR_BANK2   : Program Sequence Error on Bank 2 flag
+  *     @arg FLASH_FLAG_STRBER_BANK2   : Program Alignment Error on Bank 2 flag
+  *     @arg FLASH_FLAG_INCERR_BANK2   : Inconsistency Error on Bank 2 flag
+  *     @arg FLASH_FLAG_OPERR_BANK2    : Operation Error on Bank 2 flag
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 649 : 
+  *     @arg FLASH_FLAG_WRPERR_BANK1     : Write Protection Error on Bank 1 flag
+  *     @arg FLASH_FLAG_PGSERR_BANK1     : Program Sequence Error on Bank 1 flag
+  *     @arg FLASH_FLAG_STRBER_BANK1     : Program Alignment Error on Bank 1 flag
+  *     @arg FLASH_FLAG_INCERR_BANK1     : Inconsistency Error on Bank 1 flag
+  *     @arg FLASH_FLAG_OPERR_BANK1      : Operation Error on Bank 1 flag
+stm32h7xx_hal_flash.h (Drivers\STM32H7xx_HAL_Driver\Inc) line 665 : 
+  *     @arg FLASH_FLAG_WRPERR_BANK2     : Write Protection Error on Bank 2 flag
+  *     @arg FLASH_FLAG_PGSERR_BANK2     : Program Sequence Error on Bank 2 flag
+  *     @arg FLASH_FLAG_STRBER_BANK2     : Program Alignment Error on Bank 2 flag
+  *     @arg FLASH_FLAG_INCERR_BANK2     : Inconsistency Error on Bank 2 flag
+  *     @arg FLASH_FLAG_OPERR_BANK2      : Operation Error on Bank 2 flag
+HAL_GPIO_LockPin in stm32h7xx_hal_gpio.c (Drivers\STM32H7xx_HAL_Driver\Src) : 
+
+  /* Apply lock key write sequence */
+  tmp |= GPIO_Pin;
+  /* Set LCKx bit(s): LCKK='1' + LCK[15-0] */
+  GPIOx->LCKR = tmp;
+HAL_GPIO_LockPin in stm32h7xx_hal_gpio.c (Drivers\STM32H7xx_HAL_Driver\Src) : 
+  GPIOx->LCKR = tmp;
+  /* Read LCKK register. This read is mandatory to complete key lock sequence*/
+  tmp = GPIOx->LCKR;
+
+  /* read again in order to confirm lock is active */
+stm32h7xx_hal_i2c.c (Drivers\STM32H7xx_HAL_Driver\Src) line 96 : 
+      (++) I2C_FIRST_AND_LAST_FRAME: No sequential usage, functionnal is same as associated interfaces in no sequential mode
+      (++) I2C_FIRST_FRAME: Sequential usage, this option allow to manage a sequence with start condition, address
+                            and data to transfer without a final stop condition
+      (++) I2C_FIRST_AND_NEXT_FRAME: Sequential usage (Master only), this option allow to manage a sequence with start condition, address
+                            and data to transfer without a final stop condition, an then permit a call the same master sequential interface
+                            several times (like @ref HAL_I2C_Master_Seq_Transmit_IT() then @ref HAL_I2C_Master_Seq_Transmit_IT()
+                            or @ref HAL_I2C_Master_Seq_Transmit_DMA() then @ref HAL_I2C_Master_Seq_Transmit_DMA())
+      (++) I2C_NEXT_FRAME: Sequential usage, this option allow to manage a sequence with a restart condition, address
+                            and with new data to transfer if the direction change or manage only the new data to transfer
+                            if no direction change and without a final stop condition in both cases
+      (++) I2C_LAST_FRAME: Sequential usage, this option allow to manage a sequance with a restart condition, address
+stm32h7xx_hal_i2c.c (Drivers\STM32H7xx_HAL_Driver\Src) line 114 : 
+                              or HAL_I2C_Master_Seq_Receive_DMA(option I2C_FIRST_AND_NEXT_FRAME then I2C_NEXT_FRAME).
+                            Then usage of this option I2C_LAST_FRAME_NO_STOP at the last Transmit or Receive sequence permit to call the oposite interface Receive or Transmit
+                              without stopping the communication and so generate a restart condition.
+      (++) I2C_OTHER_FRAME: Sequential usage (Master only), this option allow to manage a restart condition after each call of the same master sequential
+                            interface.
+stm32h7xx_hal_sdram.c (Drivers\STM32H7xx_HAL_Driver\Src) line 16 : 
+    with SDRAM devices.
+    The following sequence should be followed to configure the FMC to interface
+    with SDRAM memories:
+
+   (#) Declare a SDRAM_HandleTypeDef handle structure, for example:
+stm32h7xx_hal_sdram.c (Drivers\STM32H7xx_HAL_Driver\Src) line 33 : 
+   (#) Initialize the SDRAM Controller by calling the function HAL_SDRAM_Init(). This function
+       performs the following sequence:
+
+       (##) MSP hardware layer configuration using the function HAL_SDRAM_MspInit()
+       (##) Control register configuration using the FMC SDRAM interface function
+stm32h7xx_hal_sdram.c (Drivers\STM32H7xx_HAL_Driver\Src) line 40 : 
+            FMC_SDRAM_Timing_Init()
+       (##) Program the SDRAM external device by applying its initialization sequence
+            according to the device plugged in your hardware. This step is mandatory
+            for accessing the SDRAM device.
+
+stm32h7xx_hal_sdram.c (Drivers\STM32H7xx_HAL_Driver\Src) line 164 : 
+/**
+  * @brief  Performs the SDRAM device initialization sequence.
+  * @param  hsdram pointer to a SDRAM_HandleTypeDef structure that contains
+  *                the configuration information for SDRAM module.
+  * @param  Timing Pointer to SDRAM control timing structure
+stm32h7xx_hal_sdram.c (Drivers\STM32H7xx_HAL_Driver\Src) line 217 : 
+/**
+  * @brief  Perform the SDRAM device initialization sequence.
+  * @param  hsdram pointer to a SDRAM_HandleTypeDef structure that contains
+  *                the configuration information for SDRAM module.
+  * @retval HAL status
+stm32h7xx_hal_tim_ex.c (Drivers\STM32H7xx_HAL_Driver\Src) line 1448 : 
+/**
+  * @brief  Configure the TIM commutation event sequence.
+  * @note  This function is mandatory to use the commutation event in order to
+  *        update the configuration at each commutation detection on the TRGI input of the Timer,
+  *        the typical use of this feature is with the use of another Timer(interface Timer)
+stm32h7xx_hal_tim_ex.c (Drivers\STM32H7xx_HAL_Driver\Src) line 1507 : 
+/**
+  * @brief  Configure the TIM commutation event sequence with interrupt.
+  * @note  This function is mandatory to use the commutation event in order to
+  *        update the configuration at each commutation detection on the TRGI input of the Timer,
+  *        the typical use of this feature is with the use of another Timer(interface Timer)
+stm32h7xx_hal_tim_ex.c (Drivers\STM32H7xx_HAL_Driver\Src) line 1566 : 
+/**
+  * @brief  Configure the TIM commutation event sequence with DMA.
+  * @note  This function is mandatory to use the commutation event in order to
+  *        update the configuration at each commutation detection on the TRGI input of the Timer,
+  *        the typical use of this feature is with the use of another Timer(interface Timer)
